@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"github.com/luckswish/weather-cli/config"
+	format "github.com/luckswish/weather-cli/internal/utils"
 	"github.com/luckswish/weather-cli/internal/weather"
 	"log"
 )
@@ -17,5 +17,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(w)
+	format.FormatWeather(w)
 }
